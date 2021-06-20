@@ -12,8 +12,10 @@ setInterval(function get_time()
     if (get_hour > 12)
         get_hour -= 12;
     // covert 1 digit to 2 digit
-    if (get_hour < 10)
-        get_hour = '0' + get_hour;
+        if (get_hour < 10)
+            get_hour = '0' + get_hour;
+    
+    
     hour.innerText = get_hour;
     minute.innerText = date.slice(19, 21);
     second.innerText = date.slice(22, 24);
